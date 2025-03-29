@@ -1,7 +1,4 @@
 import java.util.Scanner;
-import com.T.mud.player.Player;
-import com.T.mud.room.Room;
-import com.T.mud.item.Item;
 
 /**
  * MUDController:
@@ -11,6 +8,7 @@ import com.T.mud.item.Item;
  */
 
 public class MUDController {
+
     private final Player player;
     private boolean running;
 
@@ -142,6 +140,10 @@ public class MUDController {
         System.out.println("help - Показать это сообщение");
         System.out.println("quit / exit - Выйти из игры");
     }
+
+    public static void main(String[] args) {
+        Player player = new Player();
+        MUDController controller = new MUDController(player);
+        controller.runGameLoop();
+    }
 }
-
-
